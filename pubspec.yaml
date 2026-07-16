@@ -1,0 +1,69 @@
+name: medisync
+description: "MediSync - Consent-Driven AI Health Coach with Solid Pod Integration"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Solid Protocol & Authentication
+  solid_auth: ^1.0.2
+  rdflib: ^0.2.12
+  http: ^1.1.0
+
+  # State Management & Navigation
+  provider: ^6.0.0
+  go_router: ^13.0.0
+
+  # UI & Design
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.0.0
+  flutter_svg: ^2.0.0
+  fl_chart: ^0.68.0
+
+  # Data & Storage
+  shared_preferences: ^2.2.0
+  json_serializable: ^6.7.0
+
+  # Utilities
+  uuid: ^4.0.0
+  intl: ^0.19.0
+  logger: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.0
+  json_serializable: ^6.7.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    # fast_rsa WASM worker assets (required by solid_auth DPoP on web)
+    - packages/fast_rsa/web/assets/worker.js
+    - packages/fast_rsa/web/assets/wasm_exec.js
+    - packages/fast_rsa/web/assets/rsa.wasm
+
+  fonts:
+    - family: Syne
+      fonts:
+        - asset: assets/fonts/Syne-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Syne-Bold.ttf
+          weight: 700
+    - family: SpaceGrotesk
+      fonts:
+        - asset: assets/fonts/SpaceGrotesk-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/SpaceGrotesk-Bold.ttf
+          weight: 700
